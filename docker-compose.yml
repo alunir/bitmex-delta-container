@@ -8,4 +8,4 @@ services:
     environment:
       - DEBUG=BitMEX:* node index.js
     ports:
-      - "4444"
+      - "4444:4444"
