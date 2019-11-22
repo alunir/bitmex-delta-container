@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  bitmex-delta-server:
+    container_name: bitmex-delta-server
+    build: 
+      context: .
+    environment:
+      - DEBUG=BitMEX:* node index.js
+    ports:
+      - "4444"
