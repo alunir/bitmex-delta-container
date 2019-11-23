@@ -7,5 +7,10 @@ services:
       context: .
     environment:
       - DEBUG=BitMEX:* node index.js
+      - PORT=4444
+      - SYMBOL=XBTUSD
+      - BITMEX_KEY=
+      - BITMEX_SECRET_KEY=
+      - MAX_TABLE_LEN=5000
     ports:
       - "4444:4444"

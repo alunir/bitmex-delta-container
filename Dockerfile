@@ -14,10 +14,7 @@ RUN cd /home/api-connectors/official-ws/nodejs \
 WORKDIR /home/api-connectors/official-ws/delta-server/
 
 COPY gencfg config.js.template /home/api-connectors/official-ws/delta-server/
-
-ENV PORT=4444 SYMBOL=XBTUSD BITMEX_KEY= BITMEX_SECRET_KEY= MAX_TABLE_LEN=5000
-
-RUN sh ./gencfg
+RUN chmod +x gencfg
 
 EXPOSE 4444
-CMD [ "node", "index.js" ]
+CMD [ "sh", "-c", "sh gencfg; node index.js" ]
