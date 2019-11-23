@@ -2,14 +2,14 @@
 // Copy me to config.js to use custom settings.
 
 module.exports = {
-  port: 4444,
+  port: ${PORT},
 
   // If false, will connect to live exchange.
   // Testnet is https://testnet.bitmex.com
   testnet: false,
 
   // Symbols to watch. Add any/all symbols you are going to poll here.
-  symbols: ['XBTUSD'],
+  symbols: ['${SYMBOL}'],
 
   // Available streams:
   // Public:
@@ -19,9 +19,9 @@ module.exports = {
   streams: ["instrument","orderBookL2","quote","trade"],
 
   // If you want to use any of the above "private" streams, you must authenticate with an API Key.
-  apiKeyID: '',
-  apiKeySecret: '',
+  apiKeyID: '${BITMEX_KEY}',
+  apiKeySecret: '${BITMEX_SECRET_KEY}',
 
   // This prevents memory usage from getting out of control. Tweak to your needs.
-  maxTableLen: 100000,
+  maxTableLen: ${MAX_TABLE_LEN},
 };

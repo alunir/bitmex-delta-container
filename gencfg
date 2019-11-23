@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -z "$PORT" ]; then
+  echo "Environment variable 'PORT' is empty!"
+  exit 1
+fi
+if [ -z "$SYMBOL" ]; then
+  echo "Environment variable 'SYMBOL' is empty!"
+  exit 1
+fi
+if [ -z "$MAX_TABLE_LEN" ]; then
+  echo "Environment variable 'MAX_TABLE_LEN' is empty!"
+  exit 1
+fi
+
+cat config.js.template | envsubst > config.js
