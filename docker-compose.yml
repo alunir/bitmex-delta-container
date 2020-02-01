@@ -8,7 +8,9 @@ services:
     environment:
       - DEBUG=BitMEX:* node index.js
       - PORT=4444
-      - SYMBOL=XBTUSD
+      - IS_TESTNET=true
+      - SYMBOL=XBTUSD,ETHUSD
+      - STREAMS=quote,trade
       - BITMEX_KEY=
       - BITMEX_SECRET_KEY=
       - MAX_TABLE_LEN=5000

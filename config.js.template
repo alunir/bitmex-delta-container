@@ -6,17 +6,17 @@ module.exports = {
 
   // If false, will connect to live exchange.
   // Testnet is https://testnet.bitmex.com
-  testnet: false,
+  testnet: ${IS_TESTNET},
 
   // Symbols to watch. Add any/all symbols you are going to poll here.
-  symbols: ['${SYMBOL}'],
+  symbols: '${SYMBOL}'.split(","),
 
   // Available streams:
   // Public:
   // ["instrument","orderBookL2","quote","trade"]
   // Private:
   // ["execution","margin","order","position"]
-  streams: ["instrument","orderBookL2","quote","trade"],
+  streams: '${STREAMS}'.split(','),
 
   // If you want to use any of the above "private" streams, you must authenticate with an API Key.
   apiKeyID: '${BITMEX_KEY}',
