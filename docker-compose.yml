@@ -10,9 +10,10 @@ services:
       - PORT=4444
       - IS_TESTNET=true
       - SYMBOL=XBTUSD,ETHUSD
-      - STREAMS=quote,trade
-      - BITMEX_KEY=
-      - BITMEX_SECRET_KEY=
+      - STREAMS=quote,trade,execution
+      # - BITMEX_KEY= # assuming set BITMEX_KEY in .env, TEST_BITMEX_KEY as well
+      # - BITMEX_SECRET_KEY= # assuming set BITMEX_SECRET_KEY in .env, TEST_BITMEX_SECRET_KEY as well
       - MAX_TABLE_LEN=5000
+    env_file: .env
     ports:
       - "4444:4444"

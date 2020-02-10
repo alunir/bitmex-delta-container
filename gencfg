@@ -20,4 +20,9 @@ if [ -z "$MAX_TABLE_LEN" ]; then
   exit 1
 fi
 
+if "$IS_TESTNET" = "true"; then
+  export BITMEX_KEY=$TEST_BITMEX_KEY
+  export BITMEX_SECRET_KEY=$TEST_BITMEX_SECRET_KEY
+fi
+
 cat config.js.template | envsubst > config.js
