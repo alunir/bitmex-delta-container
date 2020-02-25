@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ -z "$IS_TESTNET" ]; then
+  echo "Environment variable 'IS_TESTNET' is empty. so IS_TESTNET is set false."
+  export IS_TESTNET=false
+fi
 if [ -z "$PORT" ]; then
   echo "Environment variable 'PORT' is empty!"
   exit 1
