@@ -1,8 +1,4 @@
 #!/bin/bash
-if [ -z "$IS_TESTNET" ]; then
-  echo "Environment variable 'IS_TESTNET' is empty!"
-  exit 1
-fi
 if [ -z "$PORT" ]; then
   echo "Environment variable 'PORT' is empty!"
   exit 1
